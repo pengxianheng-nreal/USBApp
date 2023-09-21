@@ -35,14 +35,14 @@
 			<key>bConfigurationValue</key>
 			<integer>1</integer>
 			<key>bInterfaceNumber</key>
-			<integer>0</integer>
+			<integer>4</integer>
 			<key>idProduct</key>
-			<integer>21808</integer>
+			<integer>1060</integer>
 			<key>idVendor</key>
-			<integer>1921</integer>
+			<integer>13080</integer>
 		</dict>
 	</dict>
 	<key>OSBundleUsageDescription</key>
-	<string>Example user space USB driver</string>
+	<string>Example user space USB driver for air glasses</string>
 </dict>
 </plist>
