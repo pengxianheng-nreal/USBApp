@@ -15,7 +15,6 @@
 		6F55577022B2C52C00139F6B /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55576F22B2C52C00139F6B /* DriverKit.framework */; };
 		6F55577322B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */; };
 		6F55577522B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */; };
-		6F55577A22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6F55578022B2C54300139F6B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55577F22B2C54300139F6B /* USBDriverKit.framework */; };
 		6F55578522B2D42900139F6B /* ExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55578422B2D42900139F6B /* ExtensionManager.swift */; };
 /* End PBXBuildFile section */
@@ -31,15 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6F55577E22B2C52C00139F6B /* Embed System Extensions */ = {
+		6F55577E22B2C52C00139F6B /* Embed System Extensions (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				6F55577A22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext in Embed System Extensions */,
 			);
-			name = "Embed System Extensions";
+			name = "Embed System Extensions (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6F55578222B2C54300139F6B /* Embed Frameworks */ = {
@@ -63,7 +61,7 @@
 		6F55575F22B2C4DB00139F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F55576122B2C4DB00139F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F55576222B2C4DB00139F6B /* USBApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = USBApp.entitlements; sourceTree = "<group>"; };
-		6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.xreal.MyUserUSBInterfaceDriver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.xreal.MyUserUSBInterfaceDriver.driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F55576F22B2C52C00139F6B /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
 		6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyUserUSBInterfaceDriver.cpp; sourceTree = "<group>"; };
 		6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = MyUserUSBInterfaceDriver.iig; sourceTree = "<group>"; };
@@ -107,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6F55575222B2C4D900139F6B /* USBApp.app */,
-				6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext */,
+				6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.driver.dext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +173,7 @@
 				6F55574E22B2C4D900139F6B /* Sources */,
 				6F55574F22B2C4D900139F6B /* Frameworks */,
 				6F55575022B2C4D900139F6B /* Resources */,
-				6F55577E22B2C52C00139F6B /* Embed System Extensions */,
+				6F55577E22B2C52C00139F6B /* Embed System Extensions (1 item) */,
 			);
 			buildRules = (
 			);
@@ -203,7 +201,7 @@
 			);
 			name = MyUserUSBInterfaceDriver;
 			productName = MyUserUSBInterfaceDriver;
-			productReference = 6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.dext */;
+			productReference = 6F55576D22B2C52C00139F6B /* com.xreal.MyUserUSBInterfaceDriver.driver.dext */;
 			productType = "com.apple.product-type.driver-extension";
 		};
 /* End PBXNativeTarget section */
@@ -423,18 +421,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4D524VJZX3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = USBApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.USBApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -444,18 +445,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4D524VJZX3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = USBApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.USBApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -473,7 +477,7 @@
 					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
 				);
 				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver.driver;
 				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = driverkit;
 				SKIP_INSTALL = YES;
@@ -493,7 +497,7 @@
 					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
 				);
 				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xreal.MyUserUSBInterfaceDriver.driver;
 				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = driverkit;
 				SKIP_INSTALL = YES;

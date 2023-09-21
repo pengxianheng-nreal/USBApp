@@ -31,7 +31,7 @@
 			<key>IOUserClass</key>
 			<string>MyUserUSBInterfaceDriver</string>
 			<key>IOUserServerName</key>
-			<string>com.xreal.MyUserUSBInterfaceDriver</string>
+			<string>com.xreal.MyUserUSBInterfaceDriver.driver</string>
 			<key>bConfigurationValue</key>
 			<integer>1</integer>
 			<key>bInterfaceNumber</key>
